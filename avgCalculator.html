@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>avg calc</title>
+    <style>
+      body {
+        background-size: cover;
+        background-image: url(pngtree-mathematics-education-calculator-ruler-hand-drawn-background-image_340649.jpg);
+      }
+      main {
+        color: black;
+        text-align: center;
+      }
+      section {
+        margin: auto;
+        border: 1px solid red;
+      }
+      section div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      div input {
+        width: 200px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 20px;
+        text-align: center;
+        box-shadow: 3px 3px 3px #dde5dc;
+        background-color: #f7cfc9;
+        color: black;
+      }
+      button {
+        width: 250px;
+        height: 70px;
+        border-radius: 50%;
+        margin: 20px;
+        text-align: center;
+        box-shadow: 3px 3px 3px #dde5dc;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Simple average calculator</h1>
+      <h2>please fill all inputs by numbers then click calculate button</h2>
+    </main>
+    <section>
+      <div>
+        <input type="number" id="input1" placeholder="please enter number" />
+        <input type="number" id="input2" placeholder="please enter number" />
+      </div>
+
+      <div>
+        <input type="number" id="input3" placeholder="please enter number" />
+        <input type="number" id="input4" placeholder="please enter number" />
+      </div>
+
+      <div>
+        <input type="number" id="input5" placeholder="please enter number" />
+        <input type="number" id="input6" placeholder="please enter number" />
+      </div>
+
+      <div>
+        <input type="number" id="input7" placeholder="please enter number" />
+        <input type="number" id="input8" placeholder="please enter number" />
+      </div>
+
+      <div>
+        <input type="number" id="input9" placeholder="please enter number" />
+        <input type="number" id="input10" placeholder="please enter number" />
+      </div>
+
+      <div>
+        <button onclick="calc()">Calcultae the average</button>
+        <h1>=</h1>
+        <input type="text" id="sum" style="width: 250px; height: 70px" />
+      </div>
+    </section>
+
+    <script>
+      function calc() {
+        let box1 = document.getElementById("input1").value;
+        let box2 = document.getElementById("input2").value;
+        let box3 = document.getElementById("input3").value;
+        let box4 = document.getElementById("input4").value;
+        let box5 = document.getElementById("input5").value;
+        let box6 = document.getElementById("input6").value;
+        let box7 = document.getElementById("input7").value;
+        let box8 = document.getElementById("input8").value;
+        let box9 = document.getElementById("input9").value;
+        let box10 = document.getElementById("input10").value;
+        let sum =
+          Number(box1) +
+          Number(box2) +
+          Number(box3) +
+          Number(box4) +
+          Number(box5) +
+          Number(box6) +
+          Number(box7) +
+          Number(box8) +
+          Number(box9) +
+          Number(box10);
+        let avg = Number(sum) / 10;
+        document.getElementById("sum").ariaReadOnly = true;
+        document.getElementById("sum").value = avg;
+      }
+    </script>
+  </body>
+</html>

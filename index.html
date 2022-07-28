@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js toutorial</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome.css" />
+    <link rel="stylesheet" href="solid.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <!-- logo -->
+      <div>
+        <img src="jsd.png" alt="logo" />
+      </div>
+
+      <!--nav main txt -->
+      <div>
+        <h1>javascript Toutorial</h1>
+      </div>
+
+      <!-- div side bar -->
+      <div class="hidden_side_div">
+        <a href="#" onclick="openSide()"
+          ><i
+            class="fa fa-bars"
+            aria-hidden="true"
+            style="color: aliceblue; font-size: x-large"
+          ></i
+        ></a>
+        <section class="hidden_side" id="hidden_side">
+          <i
+            class="fa fa-window-close"
+            aria-hidden="true"
+            onclick="closeSide()"
+            id="close_icon"
+            style="align-self: flex-end"
+          ></i>
+          <a href="#">home</a>
+          <a href="#">home</a>
+          <a href="#">home</a>
+          <a href="#">home</a>
+        </section>
+      </div>
+    </nav>
+    <!-- end of nav -->
+
+    <!-- main section -->
+    <h2>javascript projects</h2>
+
+    <main>
+      <div class="main_div">
+        <div class="main_div_div">
+          <h3>We can use javascript to calculate the average by 3 ways</h3>
+
+          <hr />
+          <ol>
+            <br />
+            <li>
+              simple but limited to 10
+              <hr />
+              function average1(n1 ,n2,n3,n4,n5,n6 ,n7,n8,n9,n10) {
+              <br />let sum = n1 +n2+n3+n4+n5+n6+n7+n8+n9+n10;
+              <br />
+              let result = sum/10; return result; };
+            </li>
+            <br />
+            <li>
+              unlimited using .from & .reduce $ar.length
+              <hr />
+              function average2(){<br />
+              const arg = Array.from(arguments);<br />
+              const sum = arg.reduce((pre , cur)=>pre + cur);<br />
+              return sum/arg.length; }
+            </li>
+            <br />
+            <li>
+              unlimited using ...n array as argument
+              <hr />
+              function average3(...n){ <br />
+              const sum = n.reduce((pre,cur)=> pre + cur); <br />
+              const result = sum/n.length; <br />
+              return result; }
+            </li>
+          </ol>
+        </div>
+
+        <!-- time section -->
+        <div class="clock">
+          <div id="time_div"></div>
+          <img
+            src="time-management-concept-landing-page_52683-18572.jpg.webp.fdmdownload"
+            alt="clock"
+          />
+        </div>
+      </div>
+
+      <div class="main_div">
+        <div class="main_div_bot">
+          <!-- javascript show div -->
+          <div class="about">
+            <a href="#" onclick="showDiv()">about us</a>
+            <div class="hidden_js" id="hidden_js">
+              <i
+                class="fa fa-window-close"
+                aria-hidden="true"
+                onclick="close_div()"
+                id="close_icon"
+              ></i>
+              <p>
+                Building a website is an exercise of willpower. The bells and
+                whistles of the design process are tempting to focus on, but
+                compelling content is what makes a website work for your
+                business. There are few pieces of content on your website that
+                are more compelling than your mission, vision, values, and team.
+                And all of these elements are typically found on the About page
+                of your website.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="main_div_bot">
+          <!-- use css show hidden part -->
+          <div class="css_div">
+            <a href="#" class="sign_css">Sign in css</a>
+            <!-- hidden section appear on hover -->
+            <div class="hidden_sec" id="hidden">
+              <form action="#">
+                <fieldset>
+                  <legend>Sign in form</legend>
+                  <div>
+                    <label for="email"></label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="type your email"
+                    />
+                  </div>
+                  <div>
+                    <label for="password"></label>
+                    <input
+                      type="password"
+                      name="password"
+                      id="password"
+                      placeholder="type your password"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      type="submit"
+                      value="submit"
+                      name="submit"
+                      style="text-align: center; margin: auto 60px"
+                    />
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="main_div_bot">
+          <h3>Javascript average calculator design</h3>
+          <a href="avgCalculator.html" target="_blank" style="color: blue"
+            >Click me to go to calculator page
+          </a>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
